@@ -250,6 +250,12 @@ window-rule {
     default-column-width {}
 }
 
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    match app-id=r#"^org\.mozilla\.firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
